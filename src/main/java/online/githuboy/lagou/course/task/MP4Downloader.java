@@ -60,6 +60,7 @@ public class MP4Downloader implements Runnable, NamedTask, MediaLoader {
         initDir();
         String url = MessageFormat.format(API_TEMPLATE, this.lessonId);
         try {
+            // url e.g. https://gate.lagou.com/v1/neirong/kaiwu/getLessonPlayHistory?lessonId=1663&isVideo=true
             log.info("获取课程:{}信息，url：{}", lessonId, url);
             String body = HttpUtils.get(url, CookieStore.getCookie()).header("x-l-req-header", "{deviceType:1}").execute().body();
             JSONObject jsonObject = JSON.parseObject(body);

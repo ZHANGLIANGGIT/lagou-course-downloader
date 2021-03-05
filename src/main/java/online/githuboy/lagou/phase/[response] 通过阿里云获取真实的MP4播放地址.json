@@ -1,0 +1,38 @@
+{
+    "VideoBase": {
+        "Status": "Normal",
+        "VideoId": "7563079766a943fc83f933566f080b67",
+        "TranscodeMode": "NoTranscode",
+        "CreationTime": "2020-07-09T08:12:48Z",
+        "Title": "私有加密_2视频.mp4",
+        "MediaType": "video",
+        "CoverURL": "https://edu-vod.lagou.com/image/cover/B732EE7830D74DE8A602186461208574-6-2.png",
+        "Duration": "668.9706",
+        "OutputType": "cdn"
+    },
+    "RequestId": "1B6D4D26-2718-436D-938C-44075C464008",
+    "PlayInfoList": {
+        "PlayInfo": [
+            {
+                "Status": "Normal",
+                "StreamType": "video",
+                "Size": 168778673,
+                "Definition": "OD",
+                "Fps": "23.976025",
+                "Duration": "668.9706",
+                "ModificationTime": "2020-07-09T08:12:48Z",
+                "Specification": "Original",
+                "Bitrate": "2018.368",
+                "Encrypt": 0,
+                "PreprocessStatus": "UnPreprocess",
+                "Format": "mp4",
+                "PlayURL": "https://edu-vod.lagou.com/sv/4afd82dc-17332a25f4f/4afd82dc-17332a25f4f.mp4",
+                "NarrowBandType": "0",
+                "CreationTime": "2020-07-09T08:12:48Z",
+                "Height": 1080,
+                "Width": 1920,
+                "JobId": "7563079766a943fc83f933566f080b6702"
+            }
+        ]
+    }
+}
