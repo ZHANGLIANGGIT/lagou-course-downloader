@@ -114,7 +114,7 @@ public class Downloader {
         mediaLoaders = new Vector<>();
         lessonInfoList.forEach(lessonInfo -> {
             VideoInfoLoader loader = new VideoInfoLoader(lessonInfo.getLessonName(), lessonInfo.getAppId(), lessonInfo.getFileId(), lessonInfo.getFileUrl(), lessonInfo.getLessonId());
-            loader.setM3U8MediaLoaders(mediaLoaders);
+            loader.setMediaLoaders(mediaLoaders);
             loader.setBasePath(this.basePath);
             loader.setLatch(latch);
             ExecutorService.execute(loader);

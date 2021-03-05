@@ -41,7 +41,7 @@ public class VideoInfoLoader implements Runnable, NamedTask {
     @Setter
     private String mediaType = "mp4";
     @Setter
-    private List<MediaLoader> m3U8MediaLoaders;
+    private List<MediaLoader> mediaLoaders;
 
     @Setter
     private CountDownLatch latch;
@@ -81,11 +81,11 @@ public class VideoInfoLoader implements Runnable, NamedTask {
                     log.info("获取视频:【{}】m3u8播放地址成功:{}", videoName, m3u8Url);
                     M3U8MediaLoader m3U8 = new M3U8MediaLoader(m3u8Url, videoName, basePath.getAbsolutePath(), fileId);
                     m3U8.setUrl2(fileUrl);
-                    m3U8MediaLoaders.add(m3U8);
+                    mediaLoaders.add(m3U8);
                     // ExecutorService.execute(m3U8);
                 } else if ("mp4".equals(mediaType)) {
                     MP4Downloader mp4Downloader = MP4Downloader.builder().appId(appId).basePath(basePath.getAbsoluteFile()).videoName(videoName).fileId(fileId).lessonId(lessonId).build();
-                    m3U8MediaLoaders.add(mp4Downloader);
+                    mediaLoaders.add(mp4Downloader);
                     // ExecutorService.execute(mp4Downloader);
                 }
                 latch.countDown();

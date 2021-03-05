@@ -63,14 +63,20 @@ public class MP4Downloader implements Runnable, NamedTask, MediaLoader {
             log.info("获取课程:{}信息，url：{}", lessonId, url);
             String body = HttpUtils.get(url, CookieStore.getCookie()).header("x-l-req-header", "{deviceType:1}").execute().body();
             JSONObject jsonObject = JSON.parseObject(body);
-            if (jsonObject.getInteger("state") != 1) throw new RuntimeException("获取课程信息失败:" + body);
+            if (jsonObject.getInteger("state") != 1) {
+                throw new RuntimeException("获取课程信息失败:" + body);
+            }
+
             String aliPlayAuth = jsonObject.getJSONObject("content").getJSONObject("mediaPlayInfoVo").getString("aliPlayAuth");
             String fileId = jsonObject.getJSONObject("content").getJSONObject("mediaPlayInfoVo").getString("fileId");
             String playInfoRequestUrl = getPlayInfoRequestUrl(aliPlayAuth, fileId);
             String response = HttpRequest.get(playInfoRequestUrl).execute().body();
             System.out.println("\nAPI request result:\n\n" + response);
             JSONObject mediaObj = JSON.parseObject(response);
-            if (mediaObj.getString("Code") != null) throw new RuntimeException("获取【{}】媒体信息失败:");
+            if (mediaObj.getString("Code") != null) {
+                throw new RuntimeException("获取【{}】媒体信息失败:");
+            }
+
             JSONObject playInfoList = mediaObj.getJSONObject("PlayInfoList");
             JSONArray playInfos = playInfoList.getJSONArray("PlayInfo");
             if (playInfos.size() > 0) {
