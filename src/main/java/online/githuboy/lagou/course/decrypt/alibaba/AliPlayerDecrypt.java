@@ -14,6 +14,9 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
+ * 阿里云视频播放接入相关文档
+ * https://help.aliyun.com/product/29932.html?spm=a2c4g.11186623.3.1.3a082168qYWI6d
+ *
  * @author suchu
  * @date 2020/8/6
  */
