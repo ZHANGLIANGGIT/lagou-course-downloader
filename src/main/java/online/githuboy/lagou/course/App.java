@@ -25,9 +25,9 @@ public class App {
             // return;
         }
         //拉钩课程ID
-        String courseId = "490";
+        String courseId = "46";
         //视频保存的目录
-        String savePath = "D:\\lagou";
+        String savePath = "/Users/zhangliang/Workspaces/Code/lessons/lagou_course/video";
         Downloader downloader = new Downloader(courseId, savePath);
         Thread logThread = new Thread(() -> {
             while (true) {
