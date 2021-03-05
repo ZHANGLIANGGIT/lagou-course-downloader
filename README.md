@@ -1,5 +1,5 @@
-# lagou-course-downloader
-拉勾网课程视频下载工具
+# lg-course-downloader
+lg网课程视频下载工具
 
 本程序仅供学习交流使用
 
@@ -13,18 +13,18 @@
 - 调整代码结构
 
 ## 2020年8月7日
-- 支持最新的拉钩教育视频下载.
+- 支持最新的lg教育视频下载.
 
 
 # 前置要求
 
-1. **已购买**拉钩上的[视频课程](https://kaiwu.lagou.com/)
+1. **已购买**lg上的[视频课程](https://kaiwu.lg.com/)
 
-2. **成功登陆拉钩网**
+2. **成功登陆lg网**
 
 # 其他
 
-Lagou课程的视频现托管在阿里云，[相关文档](https://help.aliyun.com/product/29932.html?spm=a2c4g.11186623.3.1.3a082168qYWI6d)
+lg课程的视频现托管在阿里云，[相关文档](https://help.aliyun.com/product/29932.html?spm=a2c4g.11186623.3.1.3a082168qYWI6d)
 
 视频元数据API接口文档:`https://help.aliyun.com/document_detail/56124.html?spm=a2c4g.11186623.2.30.14487fbfjBfxAC`
 
@@ -35,7 +35,7 @@ Lagou课程的视频现托管在阿里云，[相关文档](https://help.aliyun.c
 ~~视频片段通过`ffmpeg`合并~~
 现在直接获取视频的mp4地址，跳过了合成（当然也可以）
 
-视频课程信息~~在视频首页html中的`<script>`标签里。~~ 现在通过`https://gate.lagou.com/v1/neirong/kaiwu/getCourseLessons?courseId={0}` 获取
+视频课程信息~~在视频首页html中的`<script>`标签里。~~ 现在通过`https://gate.lg.com/v1/neirong/kaiwu/getCourseLessons?courseId={0}` 获取
 
 程序默认下载`FHD`全高清视频源
 
@@ -43,13 +43,13 @@ Lagou课程的视频现托管在阿里云，[相关文档](https://help.aliyun.c
 
 ## 下载源码
 
-打开shell或者cmd，输入`git clone https://github.com/SweetInk/lagou-course-downloader.git`
+打开shell或者cmd，输入`git clone https://github.com/SweetInk/lg-course-downloader.git`
 
 ## 运行(以源码方式)
 
 1. 下载 [IDEA](https://www.jetbrains.com/idea/download/#section=windows) ,并安装，导入之前下载好的源码
 
-2. 成功登陆拉钩网后
+2. 成功登陆lg网后
 
 3. 浏览器打开调试工具
 
