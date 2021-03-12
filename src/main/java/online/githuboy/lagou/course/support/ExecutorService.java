@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class ExecutorService {
 
     public static final AtomicInteger COUNTER = new AtomicInteger(0);
-    private final static TaskNamedThreadPoolExecutor executor = new TaskNamedThreadPoolExecutor(16, 16,
+    private final static TaskNamedThreadPoolExecutor executor = new TaskNamedThreadPoolExecutor(8, 8,
             0L, TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<>(64));
 
